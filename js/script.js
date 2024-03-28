@@ -7,11 +7,11 @@ $(document).ready(function() {
 
         if(task !== ""){
 
-            $("ul").append('<li><p>'+ task +'</p><i class="fa-solid fa-trash-can"></i></li>').addClass("task")
+            $("ul").append('<li><p>'+ task +'</p><i class="fa-solid fa-trash-can"></i></li><br>').addClass("task")
+
+            $(".task").css('margin', '20px')
 
             $("#input").val("")
-
-            $(".empty").css("display", "none")
 
         }
 
@@ -20,8 +20,6 @@ $(document).ready(function() {
     $("ul").on('click', '.fa-trash-can', function(){
 
         $(this).parent('li').remove()
-
-        $(".empty").css("display", "block")
 
     })
 
